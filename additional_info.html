@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Information - Health Stories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./Images/logo.png" alt="LoGo"
+                style="border-radius: 50%; height: 100px; width: 110px; padding-left: 10px;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Account <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="medical-history.html">Medical History Update</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h1>Additional Information</h1>
+            <div class="form-container">
+                <form id="additionalInfoForm" action="additional_info.php" method="POST" onsubmit="return validateAdditionalInfoForm()">
+
+                    <div class="form-group">
+                        <label for="infoUsername">User Name:</label>
+                        <input type="text" id="infoUsername" name="infoUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="infoEmail">Email:</label>
+                        <input type="email" id="infoEmail" name="infoEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="infoAadhaar">Aadhaar:</label>
+                        <input type="text" id="infoAadhaar" name="infoAadhaar" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="infoBloodGroup">Blood Group:</label>
+                        <select id="infoBloodGroup" name="infoBloodGroup" required>
+                            <option value="">Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">Birth Date:</label>
+                        <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="0" max="120" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyName">Emergency Contact Name:</label>
+                        <input type="text" id="emergencyName" name="emergencyName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyContact">Emergency Contact No.:</label>
+                        <input type="tel" id="emergencyContact" name="emergencyContact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyRelation">Emergency Contact Relation:</label>
+                        <input type="text" id="emergencyRelation" name="emergencyRelation" required>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Continue</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Health Stories</h3>
+                <p>A globally accessible medical service platform</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="signin.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: Healthstories@gmail.com</p>
+                <p>College:....</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Health Stories. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
